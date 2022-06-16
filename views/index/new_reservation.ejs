@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title_name %>
+    </title>
+    <!-- bootrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/index.css">
+    </head>
+
+    <body>
+        <header class="page-header px-5 py-3">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="bg-light text-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="text-light navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="text-light nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-light nav-link" href="/new_reservation">Add reservation</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+            <main class="container">
+                <form action="/new_reservation" method="POST">
+                    <div class="form-group row">
+                        <label for="firstName" class="col-sm-2 col-form-label">First name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstName" placeholder="" name="firstName" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-sm-2 col-form-label">Last name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastName" placeholder="" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="roomType" class="col-sm-2 col-form-label">Room type</label>
+                        <div class="col-sm-10">
+                            <select id="roomType" name="roomType" class="form-control">
+                                <option value="single"></option>
+                                <option value="single">Single room</option>
+                                <option value="lux">Lux room</option>
+                                <option value="family">Family room</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dinner" class="col-sm-2 col-form-label">Dinner</label>
+                        <div class="col-sm-10">
+                            <select id="dinner" name="dinner" class="form-control">
+                                <option value="no"></option>
+                                <option value="yes">Yes sure</option>
+                                <option value="no">No need</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="paymentMethod" class="col-sm-2 col-form-label">Payment method</label>
+                        <div class="col-sm-10">
+                            <select id="paymentMethod" name="paymentMethod" class="form-control">
+                                <option value="cash"></option>
+                                <option value="cash">Cash</option>
+                                <option value="card">Card</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="comment" class="col-sm-2 col-form-label">Comment</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="comment" placeholder="......" name="comment" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Reserve Order</button>
+                </form>
+            </main>
+            <script src="/javascript/main.js"></script>
+        </body>
+        
+        </html>
